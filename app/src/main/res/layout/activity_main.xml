@@ -30,7 +30,6 @@
             android:id="@+id/toSeeAll"
             android:text="@string/toSeeAll"
             android:textColor="@color/purple_200"
-            android:backgroundTint="@color/white"
             android:background="@drawable/shape"/>
 
         <include layout="@layout/movie_sns_buttons"/>

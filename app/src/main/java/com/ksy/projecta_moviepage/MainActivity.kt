@@ -6,10 +6,7 @@ import android.text.Layout
 import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
-import android.widget.LinearLayout
-import android.widget.RatingBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.view.isVisible
 import com.ksy.projecta_moviepage.R
 import com.ksy.projecta_moviepage.databinding.ActivityMainBinding
@@ -19,39 +16,60 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         binding.movieInfo.good.setOnClickListener {
             if (binding.movieInfo.badSelected.isVisible) {
-                binding.movieInfo.badSelected.visibility = INVISIBLE
-                val badNumberText = binding.movieInfo.badNumber.text
-                binding.movieInfo.badNumber.text= (badNumberText.toString().toInt() - 1).toString()
+                makeInvisible(binding.movieInfo.badSelected)
+                makeDecrease(binding.movieInfo.badNumber)
             } else {
-                binding.movieInfo.goodSelected.visibility = VISIBLE
-                val goodNumberText = binding.movieInfo.goodNumber.text
-                binding.movieInfo.goodNumber.text= (goodNumberText.toString().toInt() + 1).toString()
+                makeVisible(binding.movieInfo.goodSelected)
+                makeIncrease(binding.movieInfo.goodNumber)
             }
         }
 
         binding.movieInfo.bad.setOnClickListener {
             if (binding.movieInfo.goodSelected.isVisible) {
-                binding.movieInfo.goodSelected.visibility = INVISIBLE
-                val goodNumberText = binding.movieInfo.goodNumber.text
-                binding.movieInfo.goodNumber.text= (goodNumberText.toString().toInt() - 1).toString()
+                makeInvisible(binding.movieInfo.goodSelected)
+                makeDecrease(binding.movieInfo.goodNumber)
             } else {
-                binding.movieInfo.badSelected.visibility = VISIBLE
-                val badNumberText = binding.movieInfo.badNumber.text
-                binding.movieInfo.badNumber.text= (badNumberText.toString().toInt() + 1).toString()
+                makeVisible(binding.movieInfo.badSelected)
+                makeIncrease(binding.movieInfo.badNumber)
             }
         }
 
         binding.toSeeAll.setOnClickListener{
-            Toast.makeText(this@MainActivity, "모두보기 버튼을 클릭하셨습니다!", Toast.LENGTH_SHORT)
+            Toast.makeText(this@MainActivity, "모두보기 버튼을 클릭하셨습니다!", Toast.LENGTH_SHORT).show()
         }
 
         binding.movieRating.commentWrite.setOnClickListener{
-            Toast.makeText(this@MainActivity, "작성하기 버튼을 클릭하셨습니다!", Toast.LENGTH_SHORT)
+            Toast.makeText(this@MainActivity, "작성하기 버튼을 클릭하셨습니다!", Toast.LENGTH_SHORT).show()
         }
+
+        val input = String()
+        val characterSequence :CharSequence = input
+        if (characterSequence is StringBuffer) {
+            var a :StringBuffer = characterSequence
+        }
+    }
+
+    fun CharSequence.increase() : String = (this.toString().toInt() + 1).toString()
+    fun CharSequence.decrease() : String = (this.toString().toInt() - 1).toString()
+
+    fun makeVisible(imageView: ImageView) {
+        imageView.visibility = VISIBLE
+    }
+
+    fun makeInvisible(imageView: ImageView) {
+        imageView.visibility = INVISIBLE
+    }
+
+    fun makeIncrease(textView: TextView) {
+        textView.text = textView.text.increase()
+    }
+
+    fun makeDecrease(textView: TextView) {
+        textView.text = textView.text.decrease()
     }
 }
 

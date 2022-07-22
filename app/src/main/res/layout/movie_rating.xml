@@ -56,11 +56,11 @@
 
             <ImageView
                 android:id="@+id/userImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/user1"
+
                 android:background="@drawable/shape_for_user"/>
 
             <LinearLayout
@@ -86,7 +86,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="10분전"
-                        android:textColor="@color/material_dynamic_neutral80"
+                        android:textColor="@color/gray"
                         android:textStyle="bold" />
 
                     <RatingBar
@@ -144,7 +144,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:text="신고하기"
-                        android:textColor="@color/material_dynamic_neutral80"
+                        android:textColor="@color/gray"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -185,7 +185,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:text="10분전"
-                        android:textColor="@color/material_dynamic_neutral80"
+                        android:textColor="@color/gray"
                         android:textStyle="bold" />
 
                     <RatingBar
@@ -243,7 +243,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:text="신고하기"
-                        android:textColor="@color/material_dynamic_neutral80"
+                        android:textColor="@color/gray"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
