@@ -17,21 +17,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        var isGoodActivated = false
+        var isBadActivated = false
 
         binding.movieInfo.good.setOnClickListener {
             if (binding.movieInfo.badSelected.isVisible) {
                 makeInvisible(binding.movieInfo.badSelected)
                 makeDecrease(binding.movieInfo.badNumber)
             } else {
-                makeVisible(binding.movieInfo.goodSelected)
+                binding.movieInfo.good.setImageResource(R.drawable.ic_thumb_up_selected)
                 makeIncrease(binding.movieInfo.goodNumber)
+                isGoodActivated = true
             }
         }
 
         binding.movieInfo.bad.setOnClickListener {
-            if (binding.movieInfo.goodSelected.isVisible) {
-                makeInvisible(binding.movieInfo.goodSelected)
+            if (isGoodActivated) {
+                binding.movieInfo.good.setImageResource(R.drawable.ic_thumb_up)
                 makeDecrease(binding.movieInfo.goodNumber)
+                isGoodActivated = false
             } else {
                 makeVisible(binding.movieInfo.badSelected)
                 makeIncrease(binding.movieInfo.badNumber)
