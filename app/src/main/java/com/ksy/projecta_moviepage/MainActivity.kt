@@ -2,17 +2,17 @@ package com.ksy.projecta_moviepage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Layout
-import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.*
-import androidx.core.view.isVisible
-import com.ksy.projecta_moviepage.R
 import com.ksy.projecta_moviepage.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    var movieRatingList = arrayListOf<Movie_Rating>(
+        Movie_Rating("user1", "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기"),
+        Movie_Rating("user1", "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기"),
+        Movie_Rating("user1", "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기")
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -55,6 +55,10 @@ class MainActivity : AppCompatActivity() {
         if (characterSequence is StringBuffer) {
             var a :StringBuffer = characterSequence
         }
+
+        //var movieRatingList = arrayListOf<Movie_Rating>()
+        val adapter = MovieRatingAdapter(this, movieRatingList)
+        binding.movieRating.userListView.adapter = adapter
     }
 
     fun CharSequence.increase() : String = (this.toString().toInt() + 1).toString()
