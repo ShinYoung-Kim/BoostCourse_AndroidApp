@@ -84,22 +84,13 @@
                     android:textColor="@color/white"
                     android:textSize="10sp"
                     />
-                <ImageView
+                <Button
                     android:id="@+id/bad"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:layout_gravity="left"
                     android:layout_marginStart="15dp"
-                    android:src="@drawable/ic_thumb_down"
-                    />
-                <ImageView
-                    android:id="@+id/bad_selected"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="left"
-                    android:layout_marginStart="-15dp"
-                    android:src="@drawable/ic_thumb_down_selected"
-                    android:visibility="invisible"
+                    android:background="@drawable/selector_checked"
                     />
                 <TextView
                     android:id="@+id/bad_number"

@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         var isBadActivated = false
 
         binding.movieInfo.good.setOnClickListener {
-            if (binding.movieInfo.badSelected.isVisible) {
-                makeInvisible(binding.movieInfo.badSelected)
+            if (binding.movieInfo.bad.isSelected) {
+                binding.movieInfo.bad.isSelected = false
                 makeDecrease(binding.movieInfo.badNumber)
             } else {
                 binding.movieInfo.good.setImageResource(R.drawable.ic_thumb_up_selected)
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                 makeDecrease(binding.movieInfo.goodNumber)
                 isGoodActivated = false
             } else {
-                makeVisible(binding.movieInfo.badSelected)
+                binding.movieInfo.bad.isSelected = true
                 makeIncrease(binding.movieInfo.badNumber)
             }
         }
