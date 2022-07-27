@@ -3,6 +3,7 @@ buildscript {
     ext.kotlin_version = '1.7.0-Beta'
     repositories {
         mavenCentral()
+        //maven { url "https://google.bintray.com/flexbox-layout" }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"

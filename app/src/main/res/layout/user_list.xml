@@ -7,7 +7,7 @@
             android:id="@+id/userImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/user1"
             android:background="@drawable/shape_for_user"/>

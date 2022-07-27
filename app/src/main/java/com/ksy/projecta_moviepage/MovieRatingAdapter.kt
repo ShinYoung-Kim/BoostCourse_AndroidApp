@@ -10,46 +10,44 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+//import com.google.android.ads.mediationtestsuite.viewmodels.ItemViewHolder
+//import com.blacklog.recyclerview.databinding.ItemRecyclerViewBinding
 
-class MovieRatingAdapter (val context: Context, val movieRatingList: ArrayList<Movie_Rating>) : BaseAdapter() {
-    override fun getCount(): Int {
-        return movieRatingList.size
+class MovieRatingAdapter(val listData : ArrayList<Movie_Rating>) : RecyclerView.Adapter<ViewHolder>() {
+    //var listData = mutableListOf<Movie_Rating>()
+    override fun getItemCount(): Int {
+        return listData.size
     }
 
-    override fun getItem(p0: Int): Any {
-        return movieRatingList[p0]
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.user_list, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun getItemId(p0: Int): Long {
-        return 0
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.userImage.setImageResource(listData.get(position).userImage)
+        holder.userId.text = listData[position].userId
+        holder.time.text = listData.get(position).time
+        holder.rating.rating = listData.get(position).rating
+        holder.comment.text = listData.get(position).comment
+        holder.recommend.text = listData.get(position).recommend
+        holder.recommendNumber.text = listData.get(position).recommendNumber
+        holder.forSpace.text = listData.get(position).forSpace
+        holder.forReport.text = listData.get(position).forReport
     }
-
-    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        val view:View = LayoutInflater.from(context).inflate(R.layout.user_list, null)
-
-        val userImage = view.findViewById<ImageView>(R.id.userImage)
-        val userId = view.findViewById<TextView>(R.id.userId)
-        val time = view.findViewById<TextView>(R.id.time)
-        val rating = view.findViewById<RatingBar>(R.id.ratingNumberUser1)
-        val comment = view.findViewById<TextView>(R.id.userComment)
-        val recommend = view.findViewById<TextView>(R.id.userRecommend)
-        val recommendNumber = view.findViewById<TextView>(R.id.userRecommendNumber)
-        val forSpace = view.findViewById<TextView>(R.id.userSpace)
-        val forReport = view.findViewById<TextView>(R.id.userReport)
-
-        val movieRating = movieRatingList[p0]
-
-        val resourceId = context.resources.getIdentifier(movieRating.userImage, "drawable", context.packageName)
-        userImage.setImageResource(resourceId)
-        userId.text = movieRating.userId
-        time.text = movieRating.time
-        rating.rating = movieRating.rating
-        comment.text = movieRating.comment
-        recommend.text = movieRating.recommend
-        recommendNumber.text = movieRating.recommendNumber
-        forSpace.text = movieRating.forSpace
-        forReport.text = movieRating.forReport
-
-        return view
-    }
+}
+class ViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
+    val userImage = itemView.findViewById<ImageView>(R.id.userImage)
+    val userId = itemView.findViewById<TextView>(R.id.userId)
+    val time = itemView.findViewById<TextView>(R.id.time)
+    val rating = itemView.findViewById<RatingBar>(R.id.ratingNumberUser1)
+    val comment = itemView.findViewById<TextView>(R.id.userComment)
+    val recommend = itemView.findViewById<TextView>(R.id.userRecommend)
+    val recommendNumber = itemView.findViewById<TextView>(R.id.userRecommendNumber)
+    val forSpace = itemView.findViewById<TextView>(R.id.userSpace)
+    val forReport = itemView.findViewById<TextView>(R.id.userReport)
 }

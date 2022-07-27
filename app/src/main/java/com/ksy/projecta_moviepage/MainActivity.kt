@@ -5,13 +5,15 @@ import android.os.Bundle
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.*
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ksy.projecta_moviepage.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     var movieRatingList = arrayListOf<Movie_Rating>(
-        Movie_Rating("user1", "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기"),
-        Movie_Rating("user1", "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기"),
-        Movie_Rating("user1", "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기")
+        Movie_Rating(R.drawable.user1, "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기"),
+        Movie_Rating(R.drawable.user1, "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기"),
+        Movie_Rating(R.drawable.user1, "kym71**", "10분전", 5.toFloat(), "적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.", "추천", "0", "|", "신고하기")
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //var movieRatingList = arrayListOf<Movie_Rating>()
-        val adapter = MovieRatingAdapter(this, movieRatingList)
+        val adapter = MovieRatingAdapter(movieRatingList)
         binding.movieRating.userListView.adapter = adapter
     }
 
