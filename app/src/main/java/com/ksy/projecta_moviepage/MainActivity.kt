@@ -1,5 +1,6 @@
 package com.ksy.projecta_moviepage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.INVISIBLE
@@ -61,6 +62,16 @@ class MainActivity : AppCompatActivity() {
         //var movieRatingList = arrayListOf<Movie_Rating>()
         val adapter = MovieRatingAdapter(movieRatingList)
         binding.movieRating.userListView.adapter = adapter
+
+        binding.movieRating.commentWrite.setOnClickListener {
+            val intent = Intent(this, WritingComment::class.java)
+            startActivity(intent)
+        }
+
+        binding.toSeeAll.setOnClickListener {
+            val intent = Intent(this, CommentList::class.java)
+            startActivity(intent)
+        }
     }
 
     fun CharSequence.increase() : String = (this.toString().toInt() + 1).toString()
