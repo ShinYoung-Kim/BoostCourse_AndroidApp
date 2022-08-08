@@ -3,6 +3,7 @@ package com.ksy.projecta_moviepage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
+import com.ksy.projecta_moviepage.databinding.ActivityCommentListBinding
 
 class CommentList : AppCompatActivity() {
     var movieRatingList = arrayListOf<Movie_Rating>(
@@ -12,10 +13,10 @@ class CommentList : AppCompatActivity() {
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_comment_list)
+        val binding = ActivityCommentListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val adapter = MovieRatingAdapter(movieRatingList)
-        val userListView : RecyclerView = findViewById(R.id.userListView)
-        userListView.adapter = adapter
+        binding.movieRatingInComment.userListView.adapter = adapter
     }
 }

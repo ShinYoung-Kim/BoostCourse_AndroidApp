@@ -4,21 +4,37 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/comment_shape.xml" value="0.1235" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/line_shape.xml" value="0.121" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/orange_button_shape.xml" value="0.1595" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/selector_checked.xml" value="0.1655" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/selector_enabled.xml" value="0.1655" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/shape.xml" value="0.1155" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/drawable/shape_for_user.xml" value="0.1155" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/activity_comment_list.xml" value="0.1" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/activity_main.xml" value="0.22905620360551432" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/activity_movie_list.xml" value="0.2" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/activity_movie_list_content.xml" value="0.132" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/activity_writing_comment.xml" value="0.1125" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/comment_list.xml" value="0.2" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/drawer_header.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/fragment_movie_a.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/fragment_movie_b.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/fragment_movie_c.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/fragment_movie_d.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/fragment_movie_e.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/fragment_movie_f.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/movie_info.xml" value="0.36" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/movie_info_simple.xml" value="0.2171875" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/movie_list_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/movie_rating.xml" value="0.1" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/movie_sns_buttons.xml" value="0.2171875" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/movie_story.xml" value="0.2171875" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/orange_button_shape.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/toolbar_main.xml" value="0.1" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/user_list.xml" value="0.1125" />
         <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/layout/write_comment.xml" value="0.132" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/menu/drawer_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/ksy/AndroidStudioProject/ProjectA_MoviePage/app/src/main/res/menu/toolbar_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
