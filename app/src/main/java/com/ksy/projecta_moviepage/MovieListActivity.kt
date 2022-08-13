@@ -7,6 +7,7 @@ import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import com.google.android.material.navigation.NavigationView
 import com.ksy.projecta_moviepage.databinding.ActivityMovieListBinding
+import kotlinx.android.synthetic.main.activity_movie_list.*
 
 class MovieListActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -28,8 +29,7 @@ class MovieListActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             android.R.id.home -> {
-                val binding = ActivityMovieListBinding.inflate(layoutInflater)
-                binding.activityMovieList.openDrawer(GravityCompat.START)
+                activityMovieList.openDrawer(GravityCompat.START)
             }
         }
         return super.onOptionsItemSelected(item)
